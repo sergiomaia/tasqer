@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'io/console'
+Bundler.require
+
+Dir['./lib/*.rb'].each { |file| require file }
+
+manager = TASQER::Manager.new
+option = nil
+
+loop do
+  TASQER::Interface.clear
+  TASQER::Interface.start 'Tasqer version 0.0.1'
+  manager.display_list
+
+  TASQER::Interface.start 'Options'
+  TASQER::Interface.display_options
+
+  option = STDIN.getch.to_sym
+  TASQER::Interface.start(TASQER::Interface::OPTIONS[option])
+
+  case option
+  when :a then manager.add
+  when :d then manager.toggle
+  when :r then manager.remove
+  when :q then exit
+  else
+    puts "The options are (:a) (:d) (:r) (:q)"
+  end
+
+  puts "\nPress any tecla to continue"
+
+  STDIN.getch
+end
