@@ -17,6 +17,6 @@ And then, execute it from terminal:
 
     $ bin/manager
 
-PS: The command ```chmod +x bin/manager``` doesn't work on ```windows```, use:
+PS: The command ```chmod +x bin/manager``` doesn't work on ```windows```, use the following instead:
 
-    $ ruby bin/manager instead
+    $ ruby bin/manager 
