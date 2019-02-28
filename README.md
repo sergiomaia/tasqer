@@ -1,6 +1,10 @@
 <img width="1002" alt="tasqer-v-0-01" src="https://user-images.githubusercontent.com/32008/53485071-08c85c80-3a64-11e9-9491-626ff612268a.png">
 
 # Usage
+First, clone it from github:
+
+    $ git clone git@github.com:sergiomaia/tasqer.git
+    
 Inside the tasqer folder, execute:
 
     $ bundle
